@@ -1,4 +1,11 @@
 <% @articles.each do |article| %>
-<h3><%= link_to article.title, article_path(article) %></h3>
-<p><%= simple_format(@article.text) %></p>
+<article class="blog-article">
+    <h3><%= article.title %></h3>
+    <p class="article-time">
+        <%= time_ago_in_words(article.created_at) %> ago 
+        <%= link_to article.category.name , articles_path(category: article.category_id) %>
+    </p>
+    <p><%= article.introduction %></p>
+    <%= link_to 'Read more....', article_path(article) %>
+</article>
 <% end %>

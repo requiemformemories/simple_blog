@@ -1,6 +1,14 @@
 class Skvsdovlmfd::ArticlesController < ApplicationController
+  http_basic_authenticate_with name: "admin", password: "0000"
   
-  layout 'blog'
+  layout 'backend'
+  
+  def preview
+    respond_to do |format|
+      format.html{}
+      format.js {  }
+    end
+  end
   
   def index
     @articles = Article.all.order('created_at DESC')
@@ -39,11 +47,14 @@ class Skvsdovlmfd::ArticlesController < ApplicationController
   end
   
   def destroy
+     @article = Article.find(params[:id])
+     @article.destroy
+     redirect_to skvsdovlmfd_articles_path
   end
   
   private
   def article_params
-    params.require(:article).permit(:title, :text)
+    params.require(:article).permit(:title, :text, :category_id)
   end
   
 end

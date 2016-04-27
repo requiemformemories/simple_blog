@@ -1,0 +1,27 @@
+<aside class="col-md-3">
+  <div class="row side-row">
+    <h3>About me</h3>
+    <%= image_tag("author.jpg", class: "aboutme-img") %>
+    <p><strong>文月(Fumitsuki)</strong></p>
+    <p>廢柴。八盤。イカ守護者</p>
+    <p>專長是nil，興趣是耍廢、睡覺、寫程式。</p>
+    <p>喜歡美味的食物、貓、小蘿莉，</p>
+    <p>然後，請多指教這樣。</p>
+  </div>
+  <div class="row side-row">
+    <h3>Contact me</h3>
+    <div class="col-md-2 col-md-offset-1"><a href="#"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a></div>
+    <div class="col-md-2"><a href="#"><i class="fa fa fa-github fa-2x" aria-hidden="true"></i></a></div>
+    <div class="col-md-2"><a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></div>
+    <div class="col-md-2"><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></div>
+    <div class="col-md-2"><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></div>
+  </div>
+  <div class="row side-row">
+    <h3>Categories</h3>
+    <% Category.all.each do |category| %>
+    <ul>
+    <li class='category-li'><%= link_to category.name , articles_path(category: category.id) %></li>
+    </ul>
+    <%end%>
+  </div>
+</aside>

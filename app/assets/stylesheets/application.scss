@@ -1,0 +1,113 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+// ---------------------------------------------- import
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// ---------------------------------------------- variables
+$border-color: #dedede;
+$a-color: #777;
+$a-hover-color:#333;
+
+h1,h2,h3,h4,h5,h6,p,a,input,label{
+    font-family: 'Lustria', serif;    
+}
+
+a{
+    color: $a-color;    
+    margin: 10px 0;
+}
+a:hover, a:focus{
+    color: $a-hover-color;
+    text-decoration: none;
+}
+
+.submit{
+    background-color: $a-color;
+    color: #fff;
+}
+
+.submit:hover,.submit:focus{
+    background-color: $a-hover-color;
+    color:#fff;
+}
+
+// ----------------------------------------------- nav
+.navbar{
+    border-radius: 0;
+    border: 1px solid transparent;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    background-color: white;
+    .navbar-nav > li > a{
+        
+    }
+}
+
+// ---------------------------------------------- aside
+.side-row{
+    margin-bottom: 20px;
+    h3{
+        font-size: 20px;
+        text-align: center;
+        border-bottom: 1px solid $border-color; 
+    }
+    p{
+        text-align: center;
+    }
+
+}
+.aboutme-img{
+    width: 50%;
+    border-radius: 50%;
+    margin: 10px 25%;
+}
+.category-li{
+     list-style-type: none;
+}
+
+// ---------------------------------------------- section
+.blog-article{
+    padding: 20px 5px;
+    border-bottom: 1px solid $border-color;
+}
+.article-time{
+    color: #aaa;
+    font-size: 12px;
+}
+
+// ---------------------------------------------- comment
+.comment-name{
+    font-size: 20px;
+}
+.comment-email{
+    font-size: 15px;
+    color: #aaa;
+}
+
+
+// ---------------------------------------------- footer
+.blog-footer{
+    padding: 50px;
+    margin-top: 100px;
+    p{
+        text-align: center;
+    }
+}
+

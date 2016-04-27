@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><% 'Simple Blog' || @Pagetitle %></title>
+  <title><%= @Pagetitle  || 'Fumitsuki\'s Magic Box'%></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>Simple Blog</h1>
-<%= yield %>
+
+
+<header class="col-md-12 blog-header">
+  <h1 id="blog-title">Fumitsuki's Magic Box</h1>
+  <h3 id="blog-subtitle">Keep calm and eat eight plates.</p>
+</header>
+
+<%= render :partial => 'navbar'%>
+
+<%if flash[:message] %>
+<div class="alert alert-success col-md-7 col-md-offset-1 alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <%= flash[:message] %></div>
+<% end %>
+<%if flash[:error] %>
+<div class="alert alert-danger col-md-7 col-md-offset-1 alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <%= flash[:error] %></div>
+<% end %>
+
+<div class="col-md-7 col-md-offset-1">
+  <%= yield %>
+</div>
+
+<%= render :partial => 'sidebar'%>
+
+<footer class="col-md-12 blog-footer">
+  <p>© Copyright Fumitsuki | All Rights Reserved.</p>
+  
+</footer>
+
 
 </body>
 </html>

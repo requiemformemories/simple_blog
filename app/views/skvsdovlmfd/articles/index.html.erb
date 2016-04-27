@@ -1,4 +1,34 @@
-<% @articles.each do |article| %>
-<h3><%= link_to article.title, skvsdovlmfd_article_path(article) %></h3>
-<p><%= simple_format(@article.text) %></p>
-<% end %>
+<div class="panel panel-default">
+
+  <div class="panel-heading">Articles</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>title</th>
+        <th>text</th>
+        <th>category</th>
+        <th>created_at</th>
+        <th>details</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.id %></td>
+      <td><%= article.title %></td>
+      <td><%= article.introduction %></td>
+      <td><%= article.category.name%></td>
+      <td><%= article.created_at %></td>
+      <td>
+      <%= link_to 'show', skvsdovlmfd_article_path(article) %>
+      <%= link_to 'edit', edit_skvsdovlmfd_article_path(article)  %>
+      <%= link_to 'destroy', skvsdovlmfd_article_path(article), :method => :delete  %>
+      </td>
+
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+

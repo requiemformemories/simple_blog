@@ -1,0 +1,2 @@
+module Skvsdovlmfd::CategoriesHelper
+end
