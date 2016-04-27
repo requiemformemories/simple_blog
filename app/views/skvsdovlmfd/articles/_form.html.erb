@@ -3,6 +3,11 @@
     <%= f.text_field :title, :class => 'form-control' %>    
 </fieldset>
 <fieldset class="form-group">   
+    <%= f.label :introduction, "Introduction" %>
+    <%= f.text_area :introduction, :class => 'form-control'%>
+</fieldset>
+
+<fieldset class="form-group">   
     <%= f.label :text, "Text" %>
     <%= f.text_area :text, :class => 'form-control'%>
 </fieldset>
