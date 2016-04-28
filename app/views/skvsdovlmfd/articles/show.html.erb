@@ -6,7 +6,9 @@
       <%= @article.created_at%> 
       <%= @article.category.name %> 
       </p>
-    <p><%= simple_format(@article.text) %></p>
+    <div class="wmd-output">
+      <%= sanitize(@article.text) %>
+    </div>
   </div>
   <div class="panel-footer">
     <%= link_to 'edit', edit_skvsdovlmfd_article_path(@article)  %>

@@ -47,7 +47,9 @@ end
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-sass'
-gem "friendly_id"
+gem 'friendly_id'
+gem 'simple_form'
+gem 'pagedown-bootstrap-rails'
 
 group :production do
   gem 'pg' , '0.17.1'
