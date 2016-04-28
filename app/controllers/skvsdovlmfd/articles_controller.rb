@@ -3,12 +3,7 @@ class Skvsdovlmfd::ArticlesController < ApplicationController
   
   layout 'backend'
   
-  def preview
-    respond_to do |format|
-      format.html{}
-      format.js {  }
-    end
-  end
+  
   
   def index
     @articles = Article.all.order('created_at DESC')
