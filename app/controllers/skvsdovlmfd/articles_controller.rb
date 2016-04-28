@@ -28,6 +28,7 @@ class Skvsdovlmfd::ArticlesController < ApplicationController
       flash[:notice] = "The article is saved successfully!"
       redirect_to skvsdovlmfd_article_path(@article)
     else
+      flash[:error] = @comment.errors.full_messages.join(". ")
       render :action => :new
     end
   end
@@ -42,6 +43,7 @@ class Skvsdovlmfd::ArticlesController < ApplicationController
       flash[:notice] = "The article is updated successfully!"
       redirect_to skvsdovlmfd_article_path(@article)
     else
+      flash[:alert] = @article.errors.full_messages.join(". ")
       render :action => :edit
     end
   end
@@ -54,7 +56,7 @@ class Skvsdovlmfd::ArticlesController < ApplicationController
   
   private
   def article_params
-    params.require(:article).permit(:title, :text, :category_id, :introduction)
+    params.require(:article).permit(:title, :text, :category_id, :introduction, :slug)
   end
   
 end
