@@ -8,8 +8,7 @@
 </fieldset>
 
 <fieldset class="form-group">   
-    <%= f.label :text, "Text" %>
-    <%= f.text_area :text, :class => 'form-control'%>
+    <%= f.input :text, as: :pagedown, input_html: { preview: true, rows: 10 }%>
 </fieldset>
 <fieldset class="form-group">
     <%= f.label :slug, "Slug" %>

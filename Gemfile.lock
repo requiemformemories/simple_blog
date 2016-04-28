@@ -59,8 +59,6 @@ GEM
     execjs (2.6.0)
     font-awesome-sass (4.5.0)
       sass (>= 3.2)
-    friendly_id (5.0.5)
-      activerecord (>= 4.0.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -82,6 +80,8 @@ GEM
     multi_json (1.11.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    pagedown-bootstrap-rails (2.1.2)
+      railties (> 3.1)
     pg (0.17.1)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -129,6 +129,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    simple_form (3.2.1)
+      actionpack (> 4, < 5.1)
+      activemodel (> 4, < 5.1)
     spring (1.6.4)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
@@ -162,15 +165,16 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   font-awesome-sass
-  friendly_id
   jbuilder (~> 2.0)
   jquery-rails
+  pagedown-bootstrap-rails
   pg (= 0.17.1)
   rails (= 4.2.5)
   rails_12factor (= 0.0.2)
   redcarpet (~> 3.0.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  simple_form
   spring
   sqlite3
   turbolinks

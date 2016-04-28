@@ -12,6 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sprockets
 //= require turbolinks
+//= require bootstrap-sprockets
+//= require pagedown_bootstrap
+//= require pagedown_init
 //= require_tree .
+
+$(function() {
+　$('.wmd-output').each(function(i) {
+　　var converter = new Markdown.Converter();
+　　var content = $(this).html();
+　　$(this).html(converter.makeHtml(content));
+　});
+});
