@@ -2,7 +2,7 @@
 <p class="article-time"><%= @article.created_at %> 
   <%= link_to @article.category.name , articles_path(category: @article.category_id) %>
 </p>
-<p><%= simple_format(@article.text) %></p>
+<p><%= markdown(@article.text) %></p>
 
 <h2>Comments</h2>
 <% if not @article.comments.any? %>
