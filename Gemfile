@@ -50,6 +50,7 @@ gem 'font-awesome-sass'
 gem 'redcarpet', '~> 3.0.0'
 gem 'simple_form'
 gem 'pagedown-bootstrap-rails'
+gem 'friendly_id'
 
 group :production do
   gem 'pg' , '0.17.1'
