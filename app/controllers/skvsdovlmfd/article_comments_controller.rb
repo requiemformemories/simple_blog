@@ -1,5 +1,5 @@
 class Skvsdovlmfd::ArticleCommentsController < ApplicationController
-  http_basic_authenticate_with name: "admin", password: "0000"
+  http_basic_authenticate_with name: "fumitsuki", password: "jp6m,4"
   before_action :set_article 
   
   layout 'backend'

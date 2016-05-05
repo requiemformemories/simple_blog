@@ -1,5 +1,5 @@
 class Skvsdovlmfd::ArticlesController < ApplicationController
-  http_basic_authenticate_with name: "admin", password: "0000"
+  http_basic_authenticate_with name: "fumitsuki", password: "jp6m,4"
   
   layout 'backend'
   def index
