@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= @Pagetitle  || 'Fumitsuki\'s Magic Box'%></title>
+  <% if @pagetitle %>
+  <title><%= @pagetitle.to_s+ ' - ' +'Fumitsuki\'s Magic Box'%></title>
+  <% else %>
+  <title><%= 'Fumitsuki\'s Magic Box'%></title>
+  <% end %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
