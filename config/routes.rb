@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     end
     resources :categories, :except => [:show]
   end
+  get '/googlef9bee9edb6676e51.html' => 'static_pages#googlef9bee9edb6676e51'
   
    match ':controller(/:action(/:id(.:format)))', :via => :all
   

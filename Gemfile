@@ -51,6 +51,7 @@ gem 'redcarpet', '~> 3.0.0'
 gem 'simple_form'
 gem 'pagedown-bootstrap-rails'
 gem 'friendly_id'
+gem 'meta-tags'
 
 group :production do
   gem 'pg' , '0.17.1'
