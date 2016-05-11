@@ -7,7 +7,7 @@ class Article < ActiveRecord::Base
   validates_uniqueness_of :slug
   has_many :comments
   belongs_to :category 
-    
+  acts_as_taggable  
 end
 
 

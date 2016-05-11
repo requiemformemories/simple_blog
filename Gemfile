@@ -52,6 +52,7 @@ gem 'simple_form'
 gem 'pagedown-bootstrap-rails'
 gem 'friendly_id'
 gem 'meta-tags'
+gem 'acts-as-taggable-on'
 
 group :production do
   gem 'pg' , '0.17.1'

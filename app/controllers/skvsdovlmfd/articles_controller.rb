@@ -46,7 +46,7 @@ class Skvsdovlmfd::ArticlesController < Skvsdovlmfd::ApplicationController
   
   private
   def article_params
-    params.require(:article).permit(:title, :text, :category_id, :introduction, :slug)
+    params.require(:article).permit(:title, :text, :category_id, :introduction, :slug,:tag_list)
   end
   
 end

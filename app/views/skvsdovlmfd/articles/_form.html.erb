@@ -18,3 +18,8 @@
     <%= f.label :category_id, "Category" %>
     <%= f.collection_select(:category_id, Category.all, :id, :name,{},{:class => 'form-control'}) %>
 </fieldset>
+<fieldset class="form-group">
+  <%= f.label :tag_list, "Tags (separated by commas)" %>
+  <%= f.text_field :tag_list, :class => 'form-control' %>
+</fieldset>
+

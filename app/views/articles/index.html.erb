@@ -6,6 +6,7 @@
         <%= link_to article.category.name , articles_path(category: article.category_id) %>
     </p>
     <p><%= article.introduction %></p>
+    <p><%= simple_format('Tags: ' + article.tag_list.map { |t| link_to t, articles_path(tag: t) }.join(', ')) %></p>
     <%= link_to 'Read more....', article_path(article) %>
 </article>
 <% end %>
