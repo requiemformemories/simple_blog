@@ -1,0 +1,7 @@
+<%= form_for @category, :url => skvsdovlmfd_category_path(@category), :method => :patch do |f| %>
+
+   <%= render :partial => 'form', :locals => {:f => f } %>
+    
+    <%= f.submit "Update", :class => 'btn btn-primary' %>
+    
+    <% end %>

@@ -1,4 +1,12 @@
 <% @articles.each do |article| %>
-<h3><%= article.title %></h3>
-<p><%= article.text %></p>
+<article class="blog-article">
+    <p class="text-center">
+        <%= time_tag article.created_at %>
+    </p>
+    <h3 class="text-center"><%= article.title %></h3>
+    <p class="text-center"><%= link_to article.category.name , articles_path(category: article.category_id) %></p>
+    <%= render :partial => 'article_picture', :locals => {:article => article } %>
+    <p class="article-intro"><%= article.introduction %> <%= link_to 'Read more....', article_path(article) %></p>
+    <%= simple_format('<i class="fa fa-tags" aria-hidden="true"></i>'+'  ' + article.tag_list.map { |tag| link_to tag, articles_path(tag: tag) }.join(', ')) %>
+</article>
 <% end %>

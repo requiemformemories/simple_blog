@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+
+  <div class="panel-heading">Categories</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>name</th>
+        <th>created_at</th>
+        <th>details</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @categories.each do |category| %>
+    <tr>
+      <td><%= category.id %></td>
+      <td><%= category.name%></td>
+      <td><%= category.created_at %></td>
+      <td>
+      <%= link_to 'edit', edit_skvsdovlmfd_category_path(category)  %>
+      <%= link_to 'destroy', skvsdovlmfd_category_path(category), :method => :delete  %>
+      </td>
+
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to 'new category', new_skvsdovlmfd_category_path, :class => 'btn btn-default' %>
+

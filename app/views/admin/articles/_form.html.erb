@@ -1,0 +1,30 @@
+<fieldset class="form-group">
+    <%= f.label :title, "Title" %>
+    <%= f.text_field :title, :class => 'form-control' %>    
+</fieldset>
+<fieldset class="form-group">   
+    <%= f.label :introduction, "Introduction" %>
+    <%= f.text_area :introduction, :class => 'form-control'%>
+</fieldset>
+
+<fieldset class="form-group">   
+    <%= f.input :text, as: :pagedown, input_html: { preview: true, rows: 10 }%>
+</fieldset>
+<fieldset class="form-group">
+    <%= f.label :slug, "Slug" %>
+    <%= f.text_field :slug, :class => 'form-control' %>    
+</fieldset>
+<fieldset class="form-group">
+    <%= f.label :category_id, "Category" %>
+    <%= f.collection_select(:category_id, Category.all, :id, :name,{},{:class => 'form-control'}) %>
+</fieldset>
+<fieldset class="form-group">
+  <%= f.label :tag_list, "Tags (separated by commas)" %>
+  <%= f.text_field :tag_list, :class => 'form-control' %>
+</fieldset>
+<fieldset class="form-group">
+  <%= f.label :picture, "Picture" %>
+    <%= image_tag(@article.picture_url) if @article.picture? %>
+  <%= f.file_field :picture %>
+</fieldset>
+

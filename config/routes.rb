@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
-  resources :articles
+  resources :articles, :except =>[:new, :edit, :create, :update, :destroy] do
+    resources :comments, :controller => 'article_comments', :except =>[ :index, :show, :new, :edit, :update, :destroy]
+  end  
+  root 'articles#index'
+  namespace :admin, path: Settings.admin_path_prefix do
+    resources :articles do
+      resources :comments, :controller => 'article_comments', :except => [:new, :create]
+    end
+    resources :categories, :except => [:show]
+  end
+  get '/googlef9bee9edb6676e51.html' => 'static_pages#googlef9bee9edb6676e51'
+  
+   match ':controller(/:action(/:id(.:format)))', :via => :all
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -9,7 +21,7 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-
+ 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

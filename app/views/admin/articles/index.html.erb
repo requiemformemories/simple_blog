@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Articles</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>title</th>
+        <th>picture</th>
+        <th>introduction</th>
+        <th>slug</th>
+        <th>category</th>
+        <th>tags</th>
+        <th>created_at</th>
+        <th>details</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.id %></td>
+      <td><%= article.title %></td>
+      <td><%= image_tag(article.picture_url, class: "admin_pic") if article.picture? %></td>
+      <td><%= article.introduction %></td>
+      <td><%= article.slug %></td>
+      <td><%= article.category.name%></td>
+      <td><%= article.tag_list %></td>
+      <td><%= article.created_at %></td>
+      <td>
+      <%= link_to 'show', admin_article_path(article) %>
+      <%= link_to 'edit', edit_admin_article_path(article)  %>
+      <%= link_to 'destroy', admin_article_path(article), :method => :delete  %>
+      </td>
+
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+

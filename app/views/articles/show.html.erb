@@ -1,2 +1,30 @@
-<h3><%= @article.title%></h3>
-<p><%= @article.text %></p>
+<h1><%= @article.title%> </h1>
+<p><%= time_tag @article.created_at %>
+  <%= link_to @article.category.name , articles_path(category: @article.category_id) %>
+</p>
+
+  <%= render :partial => 'article_picture', :locals => {:article => @article } %>
+<p><%= markdown(@article.text) %></p>
+<%= simple_format('<i class="fa fa-tags" aria-hidden="true"></i>'+'  ' + @article.tag_list.map { |tag| link_to tag, articles_path(tag: tag) }.join(', ')) %>
+
+
+<h2>Comments</h2>
+<% if not @article.comments.any? %>
+<p>There are no comments.</p>
+<% end %>
+<% @article.comments.each do |comment| %>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p class="comment-name"><%= comment.name %>  <span class="comment-email"><%= comment.email %></span><p>
+    <p> <%= comment.text%></p>
+    <% if comment.reply %>
+    <div class="well"><%= comment.reply %></div>
+    <% end %>
+  </div>
+</div>
+<% end %>
+
+<h3>Create a comment: </h3>
+<%= form_for([@article, @article.comments.build]) do |f| %>
+<%= render :partial => 'comment_form.html', :locals =>{:f => f} %>
+<% end %>

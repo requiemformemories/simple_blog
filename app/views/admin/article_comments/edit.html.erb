@@ -1,0 +1,10 @@
+<%= form_for @comment, :url => admin_article_comment_path(@article, @comment), :html => { :method => :patch } do |f| %>
+
+<fieldset class="form-group">
+<%= f.label :reply, 'Reply' %>
+<%= f.text_area :reply, :class => 'form-control' %>
+</fieldset>
+
+<%= f.submit 'Create', :class => 'btn btn-primary'%>
+
+<% end %>

@@ -1,0 +1,7 @@
+<%= simple_form_for @article, :url => skvsdovlmfd_article_path(@article), :method => :patch do |f| %>
+
+   <%= render :partial => 'form', :locals => {:f => f } %>
+    
+    <%= f.submit "Update", :class => 'btn btn-primary' %>
+    
+    <% end %>
