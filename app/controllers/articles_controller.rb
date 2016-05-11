@@ -3,7 +3,8 @@ class ArticlesController < ApplicationController
   layout 'blog'
   
   def index
-    set_meta_tags description: @pagetitle||'這是文月(Fumitsuki)放置學習筆記跟廢文的地方。Keep calm and eat eight plates!'
+    
+    set_meta_tags description: '這是文月(Fumitsuki)放置學習筆記跟廢文的地方。Keep calm and eat eight plates!'
 
     if params[:category]
       @articles = Article.where(category_id: params[:category]).order('created_at DESC')
@@ -16,6 +17,7 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @pagetitle = @article.title
+    set_meta_tags description:@article.introduction
   end
   
 

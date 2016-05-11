@@ -1,7 +1,5 @@
-class Skvsdovlmfd::ArticlesController < ApplicationController
-  http_basic_authenticate_with name: "fumitsuki", password: "jp6m,4"
-  
-  layout 'backend'
+class Skvsdovlmfd::ArticlesController < Skvsdovlmfd::ApplicationController
+
   def index
     @articles = Article.all.order('created_at DESC')
   end

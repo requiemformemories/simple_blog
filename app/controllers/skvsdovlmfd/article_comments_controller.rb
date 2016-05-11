@@ -1,8 +1,5 @@
-class Skvsdovlmfd::ArticleCommentsController < ApplicationController
-  http_basic_authenticate_with name: "fumitsuki", password: "jp6m,4"
+class Skvsdovlmfd::ArticleCommentsController < Skvsdovlmfd::ApplicationController
   before_action :set_article 
-  
-  layout 'backend'
   
   def edit
     @comment = @article.comments.find(params[:id])

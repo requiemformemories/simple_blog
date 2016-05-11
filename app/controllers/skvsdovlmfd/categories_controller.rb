@@ -1,6 +1,4 @@
-class Skvsdovlmfd::CategoriesController < ApplicationController
-  http_basic_authenticate_with name: "fumitsuki", password: "jp6m,4"
-  layout 'backend'
+class Skvsdovlmfd::CategoriesController < Skvsdovlmfd::ApplicationController
   
     def index
       @categories = Category.all
