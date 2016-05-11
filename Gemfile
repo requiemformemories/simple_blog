@@ -53,6 +53,7 @@ gem 'pagedown-bootstrap-rails'
 gem 'friendly_id'
 gem 'meta-tags'
 gem 'acts-as-taggable-on'
+gem 'carrierwave'
 
 group :production do
   gem 'pg' , '0.17.1'

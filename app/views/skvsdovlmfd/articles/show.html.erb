@@ -6,6 +6,8 @@
       <%= @article.created_at%> 
       <%= @article.category.name %> 
       </p>
+
+    <%= image_tag(@article.picture_url) if @article.picture? %>
     <div><%= markdown(@article.text) %></div>
 
   </div>

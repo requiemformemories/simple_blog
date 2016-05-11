@@ -5,6 +5,7 @@
       <tr>
         <th>#</th>
         <th>title</th>
+        <th>picture</th>
         <th>introduction</th>
         <th>slug</th>
         <th>category</th>
@@ -18,6 +19,7 @@
     <tr>
       <td><%= article.id %></td>
       <td><%= article.title %></td>
+      <td><%= image_tag(article.picture_url) if article.picture? %></td>
       <td><%= article.introduction %></td>
       <td><%= article.slug %></td>
       <td><%= article.category.name%></td>

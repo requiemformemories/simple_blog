@@ -8,6 +8,7 @@ class Article < ActiveRecord::Base
   has_many :comments
   belongs_to :category 
   acts_as_taggable  
+  mount_uploader :picture, PictureUploader
 end
 
 

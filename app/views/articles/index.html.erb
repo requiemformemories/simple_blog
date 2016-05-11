@@ -5,6 +5,8 @@
         <%= time_ago_in_words(article.created_at) %> ago 
         <%= link_to article.category.name , articles_path(category: article.category_id) %>
     </p>
+    
+    <%= image_tag(article.picture_url) if article.picture? %>
     <p><%= article.introduction %></p>
     <p><%= simple_format('Tags: ' + article.tag_list.map { |t| link_to t, articles_path(tag: t) }.join(', ')) %></p>
     <%= link_to 'Read more....', article_path(article) %>
