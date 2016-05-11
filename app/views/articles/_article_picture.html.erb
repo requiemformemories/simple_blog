@@ -1,0 +1,5 @@
+<%  if article.picture? %>
+    <%= image_tag(article.picture_url, class: "article-img") %>
+    <% else %>
+    <%= image_tag("no_pic.jpg",class: "article-img") %>
+    <% end %>

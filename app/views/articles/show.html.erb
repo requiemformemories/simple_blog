@@ -1,10 +1,12 @@
-<h1><%= @article.title%></h1>
-<p class="article-time"><%= @article.created_at %> 
+<h1><%= @article.title%> </h1>
+<p><%= time_tag @article.created_at %>
   <%= link_to @article.category.name , articles_path(category: @article.category_id) %>
 </p>
 
-    <%= image_tag(@article.picture_url) if @article.picture? %>
+  <%= render :partial => 'article_picture', :locals => {:article => @article } %>
 <p><%= markdown(@article.text) %></p>
+<%= simple_format('<i class="fa fa-tags" aria-hidden="true"></i>'+'  ' + @article.tag_list.map { |tag| link_to tag, articles_path(tag: tag) }.join(', ')) %>
+
 
 <h2>Comments</h2>
 <% if not @article.comments.any? %>
@@ -21,7 +23,7 @@
   </div>
 </div>
 <% end %>
-    
+
 <h3>Create a comment: </h3>
 <%= form_for([@article, @article.comments.build]) do |f| %>
 <%= render :partial => 'comment_form.html', :locals =>{:f => f} %>

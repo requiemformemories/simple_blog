@@ -5,11 +5,7 @@
     </p>
     <h3 class="text-center"><%= article.title %></h3>
     <p class="text-center"><%= link_to article.category.name , articles_path(category: article.category_id) %></p>
-    <%  if article.picture? %>
-    <%= image_tag(article.picture_url, class: "article-img") %>
-    <% else %>
-    <%= image_tag("no_pic.jpg",class: "article-img") %>
-    <% end %>
+    <%= render :partial => 'article_picture', :locals => {:article => article } %>
     <p class="article-intro"><%= article.introduction %> <%= link_to 'Read more....', article_path(article) %></p>
     <%= simple_format('<i class="fa fa-tags" aria-hidden="true"></i>'+'  ' + article.tag_list.map { |tag| link_to tag, articles_path(tag: tag) }.join(', ')) %>
 </article>

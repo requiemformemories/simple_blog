@@ -22,14 +22,27 @@
 @import "font-awesome";
 
 // ---------------------------------------------- variables
+$selection-color: #fff;
+$selection-bg-color: #5de5b8;
 $border-color: #dedede;
 $a-color: #777;
 $a-hover-color:#333;
 
-h1,h2,h3,h4,h5,h6,p,a,input,label{
+
+// ---------------------------------------------- global settings
+*{
     font-family: 'Lustria','新細明體', serif; 
-    line-height: 140%;
+    line-height: 180%;
 }
+::-moz-selection {
+  color: $selection-color; 
+  background: $selection-bg-color;
+}
+
+::selection {
+  color: $selection-color; 
+  background: $selection-bg-color;
+} 
 
 a{
     color: $a-color;    
@@ -91,10 +104,6 @@ a:hover, a:focus{
 .blog-article{
     padding: 20px 10%;
     border-bottom: 1px solid $border-color;
-}
-.article-time{
-    color: #aaa;
-    font-size: 12px;
 }
 .article-img{
     width: 100%;
