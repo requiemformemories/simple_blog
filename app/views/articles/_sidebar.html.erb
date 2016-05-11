@@ -27,7 +27,7 @@
   <div class="row side-row">
     <h3>Tags</h3>
     <% @tags.each do |tag| %>
-      <%= link_to tag.name, articles_path(tag: tag.name) %>
+      <div class="btn btn-default aside-tag"><%= link_to tag.name, articles_path(tag: tag.name) %></div>
     <% end %>
   </div>
   

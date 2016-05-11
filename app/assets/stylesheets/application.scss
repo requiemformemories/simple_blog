@@ -27,7 +27,7 @@ $a-color: #777;
 $a-hover-color:#333;
 
 h1,h2,h3,h4,h5,h6,p,a,input,label{
-    font-family: 'Lustria', serif; 
+    font-family: 'Lustria','新細明體', serif; 
     line-height: 140%;
 }
 
@@ -64,7 +64,7 @@ a:hover, a:focus{
 
 // ---------------------------------------------- aside
 .side-row{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     h3{
         font-size: 20px;
         text-align: center;
@@ -83,16 +83,26 @@ a:hover, a:focus{
 .category-li{
      list-style-type: none;
 }
+.aside-tag{
+    margin: 2px;    
+}
+
 // ---------------------------------------------- section
 .blog-article{
-    padding: 20px 5px;
+    padding: 20px 10%;
     border-bottom: 1px solid $border-color;
 }
 .article-time{
     color: #aaa;
     font-size: 12px;
 }
-
+.article-img{
+    width: 100%;
+    margin: 2%;
+}
+.article-intro{
+    margin: 10px 0;
+}
 // ---------------------------------------------- comment
 .comment-name{
     font-size: 20px;

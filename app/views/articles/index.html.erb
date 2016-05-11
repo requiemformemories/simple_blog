@@ -1,14 +1,16 @@
 <% @articles.each do |article| %>
 <article class="blog-article">
-    <h3><%= article.title %></h3>
-    <p class="article-time">
-        <%= time_ago_in_words(article.created_at) %> ago 
-        <%= link_to article.category.name , articles_path(category: article.category_id) %>
+    <p class="text-center">
+        <%= time_tag article.created_at %>
     </p>
-    
-    <%= image_tag(article.picture_url) if article.picture? %>
-    <p><%= article.introduction %></p>
-    <p><%= simple_format('Tags: ' + article.tag_list.map { |t| link_to t, articles_path(tag: t) }.join(', ')) %></p>
-    <%= link_to 'Read more....', article_path(article) %>
+    <h3 class="text-center"><%= article.title %></h3>
+    <p class="text-center"><%= link_to article.category.name , articles_path(category: article.category_id) %></p>
+    <%  if article.picture? %>
+    <%= image_tag(article.picture_url, class: "article-img") %>
+    <% else %>
+    <%= image_tag("no_pic.jpg",class: "article-img") %>
+    <% end %>
+    <p class="article-intro"><%= article.introduction %> <%= link_to 'Read more....', article_path(article) %></p>
+    <%= simple_format('<i class="fa fa-tags" aria-hidden="true"></i>'+'  ' + article.tag_list.map { |tag| link_to tag, articles_path(tag: tag) }.join(', ')) %>
 </article>
 <% end %>
