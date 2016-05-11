@@ -15,3 +15,6 @@ you can look at `config/application.yml.sample` to know how to do.
 ```
 rails s
 ```
+
+### demo
+you can see demo [here](http://fumitsuki-blog.herokuapp.com)!
