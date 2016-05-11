@@ -1,0 +1,15 @@
+defaults: &defaults
+development:
+ <<: *defaults
+ admin_path_prefix: your_admin_path
+ http_basic_auth:
+    :name: your_name 
+    :password: Your_password
+test:
+ <<: *defaults
+production:
+ <<: *defaults
+admin_path_prefix: your_admin_path
+ http_basic_auth:
+    :name: your_name 
+    :password: Your_password

@@ -19,16 +19,16 @@
     <tr>
       <td><%= article.id %></td>
       <td><%= article.title %></td>
-      <td><%= image_tag(article.picture_url) if article.picture? %></td>
+      <td><%= image_tag(article.picture_url, class: "admin_pic") if article.picture? %></td>
       <td><%= article.introduction %></td>
       <td><%= article.slug %></td>
       <td><%= article.category.name%></td>
       <td><%= article.tag_list %></td>
       <td><%= article.created_at %></td>
       <td>
-      <%= link_to 'show', skvsdovlmfd_article_path(article) %>
-      <%= link_to 'edit', edit_skvsdovlmfd_article_path(article)  %>
-      <%= link_to 'destroy', skvsdovlmfd_article_path(article), :method => :delete  %>
+      <%= link_to 'show', admin_article_path(article) %>
+      <%= link_to 'edit', edit_admin_article_path(article)  %>
+      <%= link_to 'destroy', admin_article_path(article), :method => :delete  %>
       </td>
 
     </tr>

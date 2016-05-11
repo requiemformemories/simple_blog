@@ -1,4 +1,4 @@
-class Skvsdovlmfd::ArticlesController < Skvsdovlmfd::ApplicationController
+class Admin::ArticlesController < Admin::ApplicationController
 
   def index
     @articles = Article.all.order('created_at DESC')

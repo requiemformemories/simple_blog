@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :comments, :controller => 'article_comments', :except =>[ :index, :show, :new, :edit, :update, :destroy]
   end  
   root 'articles#index'
-  namespace :skvsdovlmfd do
+  namespace :admin, path: Settings.admin_path_prefix do
     resources :articles do
       resources :comments, :controller => 'article_comments', :except => [:new, :create]
     end

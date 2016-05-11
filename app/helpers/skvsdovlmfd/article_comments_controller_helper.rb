@@ -1,2 +1,0 @@
-module Skvsdovlmfd::ArticleCommentsControllerHelper
-end

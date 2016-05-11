@@ -55,6 +55,7 @@ gem 'friendly_id'
 gem 'meta-tags'
 gem 'acts-as-taggable-on'
 gem 'carrierwave'
+gem  'settingslogic'
 
 group :production do
   gem 'pg' , '0.17.1'

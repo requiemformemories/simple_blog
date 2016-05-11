@@ -1,4 +1,4 @@
-class Skvsdovlmfd::CategoriesController < Skvsdovlmfd::ApplicationController
+class Admin::CategoriesController < Admin::ApplicationController
   
     def index
       @categories = Category.all

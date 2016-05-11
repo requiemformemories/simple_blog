@@ -1,4 +1,4 @@
-class Skvsdovlmfd::ArticleCommentsController < Skvsdovlmfd::ApplicationController
+class Admin::ArticleCommentsController < Admin::ApplicationController
   before_action :set_article 
   
   def edit
