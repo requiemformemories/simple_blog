@@ -46,7 +46,7 @@ group :development do
   gem 'spring'
 end
 
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '>= 3.4.1'
 gem 'font-awesome-sass'
 gem 'redcarpet', '~> 3.0.0'
 gem 'simple_form'
