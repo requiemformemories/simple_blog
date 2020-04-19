@@ -1,5 +1,9 @@
 # Simple Blog
-this is a very simple blog, you can create articles, add categories and tags with it.
+This is a very simple blog. You can create articles, add categories and tags with it.
+
+**Warning! This project is deprecated and not under maintenance anymore.**
+
+![Preview](https://i.imgur.com/iIubLZj.jpg)
 
 ## how to start with
 ### setup
@@ -15,6 +19,3 @@ you can look at `config/application.yml.sample` to know how to do.
 ```
 rails s
 ```
-
-### demo
-you can see demo [here](http://fumitsuki-blog.herokuapp.com)!
