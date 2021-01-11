@@ -141,7 +141,7 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     rdoc (4.3.0)
-    redcarpet (3.0.0)
+    redcarpet (3.5.1)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -211,7 +211,7 @@ DEPENDENCIES
   pg (= 0.17.1)
   rails (> 5.0.0)
   rails_12factor (= 0.0.2)
-  redcarpet (~> 3.0.0)
+  redcarpet (~> 3.5.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   settingslogic

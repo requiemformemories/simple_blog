@@ -48,7 +48,7 @@ end
 
 gem 'bootstrap-sass', '>= 3.4.1'
 gem 'font-awesome-sass'
-gem 'redcarpet', '~> 3.0.0'
+gem 'redcarpet', '~> 3.5.1'
 gem 'simple_form'
 gem 'pagedown-bootstrap-rails'
 gem 'friendly_id'
